@@ -53,7 +53,7 @@ class _ShoppingListPageState extends State<ShoppingListPage> {
         backgroundColor: Colors.green,
         title: const Text(
           "Minhas listas",
-          key: Key("appBarTitle"),
+          key: ValueKey('appbar_title'),
         ),
         centerTitle: true,
         actions: [
@@ -78,7 +78,7 @@ class _ShoppingListPageState extends State<ShoppingListPage> {
               itemBuilder: (ctx, index) {
                 final shoppingList = shoppingLists[index];
                 return InkWell(
-                  key: const Key("shoppingListCard"),
+                  key: const ValueKey("card_shopping_list"),
                   onTap: () => updateShoppingList(index),
                   child: Card(
                     child: Padding(
@@ -119,7 +119,7 @@ class _ShoppingListPageState extends State<ShoppingListPage> {
               },
             ),
       floatingActionButton: FloatingActionButton(
-        key: const Key("addListBtn"),
+        key: const ValueKey("btn_add_list"),
         onPressed: addShoppingList,
         child: const Icon(Icons.add),
       ),

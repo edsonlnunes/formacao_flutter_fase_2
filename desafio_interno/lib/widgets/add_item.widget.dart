@@ -73,7 +73,7 @@ class _AddItemState extends State<AddItem> {
               height: 15,
             ),
             TextFormField(
-              key: const Key("inputItem"),
+              key: const ValueKey("input_item_name"),
               controller: nameController,
               decoration: const InputDecoration(
                 border: InputBorder.none,
@@ -87,7 +87,7 @@ class _AddItemState extends State<AddItem> {
               },
             ),
             TextField(
-              key: const Key("inputValue"),
+              key: const ValueKey("input_item_value"),
               controller: priceController,
               decoration: const InputDecoration(
                 border: InputBorder.none,
@@ -101,7 +101,7 @@ class _AddItemState extends State<AddItem> {
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                key: const Key("addItemBtn"),
+                key: const ValueKey("btn_add_item"),
                 onPressed: addItem,
                 child: const Text("Adicionar"),
               ),
